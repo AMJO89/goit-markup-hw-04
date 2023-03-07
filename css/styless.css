@@ -27,6 +27,18 @@ section{
   padding: 94px 0px;
 }
 
+.icon-container{
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+
 /* -------------------- body -------------------- */
 
 .body{
@@ -36,6 +48,7 @@ section{
   font-size: 16px;
   letter-spacing: 0.03em;
 }
+
 
 .text{
   color: var(--color-text-secundary);
@@ -62,14 +75,9 @@ section{
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
-.menu-nav{
-  width: 20%;
-  height: 31px;
-  left: 0;
-}
+/*Logo*/
 
 header .logo{
   font-family: 'Raleway';
@@ -79,6 +87,8 @@ header .logo{
   text-decoration: none;
   color: var(--accent-color);
 }
+
+/* menu-nav*/
 
 .menu-nav {
   font-family: 'Roboto';
@@ -91,7 +101,22 @@ header .logo{
   height: 16px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  height: 31px;
+  left: 0;
 }
+
+.menu-list{
+  color: var(--color-tex-primary);
+  text-decoration: none;
+}
+
+.menu-list:hover{
+  color: var(--accent-color);
+}
+
+/*contact nav*/
 
 .contact-nav {
   font-family: 'Roboto';
@@ -108,30 +133,36 @@ header .logo{
   justify-content: flex-end;
 }
 
-.menu-list{
-  color: var(--color-tex-primary);
+.nav-mail{
+  width: 161px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+.nav-cel{
+  width: 138px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-h{
+  color: var(--color-text-secundary);
   text-decoration: none;
 }
 
-.menu-list:hover{
-  color: var(--accent-color);
-}
+.contact-h:hover{
+  color:var(--accent-color);
+  fill: var(--accent-color);
+} 
+
+
+/* -------------------- line -------------------- */
 
 .line {
   border-top: 1px solid rgba(236, 236, 236, 1);
   height: 2px;
 }
-
-/*bottoms*/
-.contact-h{
-  color: var(--color-text-secundary);
-  text-decoration: none;
-  margin: 0px 15px;
-}
-
-.contact-h:hover{
-  color:var(--accent-color);
-} 
 
 /* -------------------- main -------------------- */
 
@@ -210,11 +241,13 @@ main h2 {
   margin: 0px 200px;
 }
 
-.main-advantages svg {
+.main-advantages .icon {
   width: 270px;
   height: 120px;
   background-color:  #F5F4FA;
   border-radius: 4px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
 }
 
 .ul-advantages{
@@ -244,8 +277,11 @@ main p.text{
   padding-top: 10px;
 }
 
-.main-advantages .icon:hover{
-  fill: var(--accent-color);
+.li-advantages svg{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 /*What do we do*/
@@ -281,7 +317,7 @@ main p.text{
   justify-content: space-between;
 }
 
-.info-team li{
+.info-team {
   background-color: var(--primary-background-color);
   text-align: center;
   list-style: none;
@@ -295,28 +331,23 @@ main p.text{
   margin: 20px 0 10px 0;
 }
 
-.icon-redes ul{
+.main-our .icon-redes{
+  width: 206px;
   display: flex;
   flex-direction: row;
-
+  align-items: center;
+  justify-content: space-around;
+  margin: 16px 32px 30px 32px;
 }
 
-.icon-redes svg{
-  width: 44px;
-  height: 44px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 40px;
-}
-
-.icon-redes svg:hover {
-  background: var(--accent-color);
-  fill: var(--accent-color);
-}
-
-/*profe en este no me aplica el hover para el icono*/
-.icon-redes use:hover{
+.main-our .icon-container{
   fill: var(--color-icons);
-} 
+}
+
+.main-our .icon-container:hover{
+  background: var(--accent-color);
+  fill: var(--primary-background-color);
+}
 
 /*Regular Clients*/
 
@@ -335,18 +366,21 @@ main p.text{
 }
 
 .regular-clients li{
-    width: 170px;
-    height: 81px;
-    border: 1px solid var(--color-icons);
-    border-radius: 4px;
+  width: 170px;
+  height: 81px;
+  border: 1px solid var(--color-icons);
+  border-radius: 4px;
+  fill: var(--color-icons);
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .regular-clients li:hover{
   border: 1px solid var(--accent-color);
-  fill: var(--accent-color);
-}
-
-use.icon-client:hover{
   fill: var(--accent-color);
 }
 
@@ -409,6 +443,7 @@ footer .logo{
   width: 206px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .icon-footer p{
@@ -424,20 +459,28 @@ footer .logo{
 }
 
 .icon-footer ul{
+  width: 206px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
 
-.icon-footer svg{
+.\.icon-container{
   width: 44px;
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 40px;
+  border-radius: 50%;
+  fill: var(--primary-background-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.icon-footer svg:hover{
-  background: var(--accent-color);
+.\.icon-container:hover{
+background: var(--accent-color);
+fill: var(--primary-background-color);
 }
 
 /* -------------------- BRIEFCASE -------------------- */
@@ -449,10 +492,14 @@ footer .logo{
   align-content: center;
 }
 
-.briefcase .nav-main .container{
+.briefcase .nav-main{
   display: flex;
   justify-content: center;
-  margin-bottom: 56px;
+  padding-bottom: 0px;
+}
+
+.cards-main{
+  padding-top: 40px;
 }
 
 .buttons{
@@ -469,6 +516,11 @@ footer .logo{
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.buttons:visited{
+  background-color: var(--accent-color);
+  color:var(--primary-background-color);  
 }
 
 .buttons:hover{
